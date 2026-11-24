@@ -10,4 +10,4 @@ It works on desktop and phone (touch controls).
 
 ## Version
 
-Current build: **v35** (imported from the previous working session).
+Current build: **v35.1**: v35 plus a fix for a broken image URL on the K & A intro screen.

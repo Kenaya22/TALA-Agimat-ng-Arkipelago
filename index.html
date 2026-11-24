@@ -3485,11 +3485,11 @@ function unstick(){if(popRes){const r=popRes;popRes=null;$('pop').classList.remo
 setInterval(()=>{if(lock<0)lock=0},250);
 
 /* ---- creator page: your background + K & A Studios logo ---- */
-{const st=document.createElement('style');st.textContent='#ka{background:#0b1a3a url(data:image/webp;base64,'+AS2.ka_bg+') center/cover no-repeat}#kaCv{display:none}.kaLogo{top:22%}.kaLogo h1,.kaLogo h2{display:none}#ka #kaLogoImg{position:static;inset:auto;height:auto;object-fit:contain;width:min(68vw,330px);display:block;margin:0 auto;image-rendering:auto;animation:kaIn 1.1s ease-out both}@keyframes kaIn{from{opacity:0;transform:scale(.88)}to{opacity:1;transform:scale(1)}}.kaLogo p{margin-top:12px}';document.head.appendChild(st);
+{const st=document.createElement('style');st.textContent='#ka{background:#0b1a3a}#kaCv{display:none}.kaLogo{top:22%}.kaLogo h1,.kaLogo h2{display:none}#ka #kaLogoImg{position:static;inset:auto;height:auto;object-fit:contain;width:min(68vw,330px);display:block;margin:0 auto;image-rendering:auto;animation:kaIn 1.1s ease-out both}@keyframes kaIn{from{opacity:0;transform:scale(.88)}to{opacity:1;transform:scale(1)}}.kaLogo p{margin-top:12px}';document.head.appendChild(st);
   }
 function kaSplash(){return new Promise(res=>{const el=$('ka');let done=false;$('kaTag').textContent=LANG==='tl'?'Mga Kuwento ng Kapuluan':'Stories of the Islands';$('kaPre').textContent=LANG==='tl'?'nagtatanghal':'presents';
   const fin=()=>{if(done)return;done=true;el.classList.add('out');setTimeout(()=>{el.classList.remove('on');res()},600)};el.onpointerdown=fin;setTimeout(fin,3000)})}
-const kaImgs={};for(const k of['ka_bg','ka_logo']){const i=new Image();i.src='data:image/webp;base64,'+AS2[k];kaImgs[k]=i}
+const kaImgs={}; /* intro images now come from #kaBgImg / #kaLogoImg (see kaImgs.ka_bg2 / ka_logo2) */
 
 /* ---- loading: same picture at start-up, then it changes ---- */
 const LDP={ld_a:'center 30%',ld_b:'center 40%',ld_c:'center 40%'};let ldFirst=true;
